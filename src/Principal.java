@@ -1,3 +1,5 @@
+import com.aluracursos.screenmatch.modelos.Pelicula;
+
 public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
@@ -12,14 +14,6 @@ public class Principal {
         System.out.println("El total de las evaluciones de la pelicula es: " + miPelicula.getTotalEvaluciones());
         System.out.println("La media de la película es: " + miPelicula.calculaMedia());
 
-        Pelicula miPelicula2 = new Pelicula();
-        miPelicula2.nombre = "Daniel";
-        miPelicula2.fechaLanzamineto = 2022;
-        miPelicula2.duracionMinutos = 180;
-
-/*
-        miPelicula2.muestraFichatecnica();
-*/
 
     }
 }
