@@ -5,16 +5,22 @@ public class Principal {
         miPelicula.fechaLanzamineto = 2021;
         miPelicula.duracionMinutos = 120;
 
-        System.out.println("Mi película es: " + miPelicula.nombre);
-        System.out.println("Fue estrena en el año: " + miPelicula.fechaLanzamineto);
+        miPelicula.muestraFichatecnica();
+        miPelicula.evaluacion(10);
+        miPelicula.evaluacion(10);
+
+        System.out.println("La evalucion de esta pelicula es: " + miPelicula.sumaEvaluaciones);
+        System.out.println("Total de evaluciones: " + miPelicula.totalEvaluciones);
+        System.out.println("La media de la pelicula es: " + miPelicula.calculaMedia());
 
         Pelicula miPelicula2 = new Pelicula();
         miPelicula2.nombre = "Daniel";
         miPelicula2.fechaLanzamineto = 2022;
         miPelicula2.duracionMinutos = 180;
 
-        System.out.println("Mi película2 es: " + miPelicula2.nombre);
-        System.out.println("Fue estrena en el año: " + miPelicula2.fechaLanzamineto);
+/*
+        miPelicula2.muestraFichatecnica();
+*/
 
     }
 }
