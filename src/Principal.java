@@ -72,14 +72,16 @@ public class Principal {
         peliculaDeBruno.setFechaLanzamineto(2001);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeBruno);
         listaDePeliculas.add(miPelicula);
         listaDePeliculas.add(miPelicula2);
-        listaDePeliculas.add(peliculaDeBruno);
 
         System.out.println("El tamaño de la lista de pelicuas es: " + listaDePeliculas.size());
-        System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
+        System.out.println("La primera película es: " + listaDePeliculas.get(0).getNombre());
 
-        System.out.println(listaDePeliculas);
+        System.out.println(listaDePeliculas.toString());
+
+        System.out.println("toString de la película: " +listaDePeliculas.get(0).toString());
     }
 
 }
