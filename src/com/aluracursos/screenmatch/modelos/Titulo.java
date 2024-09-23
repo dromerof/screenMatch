@@ -9,6 +9,11 @@ public class Titulo {
     private double sumaEvaluaciones;
     private int totalEvaluciones;
 
+    public Titulo(String nombre, int fechaLanzamineto) {
+        this.nombre = nombre;
+        this.fechaLanzamineto = fechaLanzamineto;
+    }
+
     public String getNombre() {
         return nombre;
     }

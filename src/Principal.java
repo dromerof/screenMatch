@@ -11,8 +11,7 @@ public class Principal {
 
         System.out.println("\n****************************************************************\n");
 
-        Pelicula miPelicula = new Pelicula("Encanto");
-        miPelicula.setFechaLanzamineto(2021);
+        Pelicula miPelicula = new Pelicula("Encanto", 2021);
         miPelicula.setDuracionMinutos(120);
         miPelicula.setIncluidoPlan(true);
 
@@ -25,20 +24,17 @@ public class Principal {
 
         System.out.println("\n****************************************************************\n");
 
-        Pelicula miPelicula2 = new Pelicula("Matrix");
-        miPelicula2.setFechaLanzamineto(1998);
+        Pelicula miPelicula2 = new Pelicula("Matrix", 1998);
         miPelicula2.setDuracionMinutos(180);
 
         System.out.println("\n****************************************************************\n");
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("Casa del Dragon");
-        casaDragon.setFechaLanzamineto(2023);
+        Serie casaDragon = new Serie("Casa del Dragon", 2023);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
-        System.out.println("La serie Casa del Dragon tiene una duracion en minutos de: " + casaDragon.getDuracionMinutos());
+        System.out.println("La serie Casa del Dragon tiene una duración en minutos de: " + casaDragon.getDuracionMinutos());
 
         System.out.println("\n****************************************************************\n");
 
@@ -51,7 +47,7 @@ public class Principal {
         System.out.println("\n****************************************************************\n");
 
         FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
-        filtroRecomendacion.filtra( miPelicula );
+        filtroRecomendacion.filtra(miPelicula);
 
         System.out.println("\n****************************************************************\n");
 
@@ -64,19 +60,19 @@ public class Principal {
 
         System.out.println("\n****************************************************************\n");
 
-        var peliculaDeBruno = new Pelicula("El señor de los anillos");
+        var peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
         peliculaDeBruno.setDuracionMinutos(180);
-        peliculaDeBruno.setFechaLanzamineto(2001);
+
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeBruno);
         listaDePeliculas.add(miPelicula);
         listaDePeliculas.add(miPelicula2);
 
-        System.out.println("El tamaño de la lista de pelicuas es: " + listaDePeliculas.size());
+        System.out.println("El tamaño de la lista de películas es: " + listaDePeliculas.size());
         System.out.println("La primera película es: " + listaDePeliculas.get(0).getNombre());
         System.out.println(listaDePeliculas.toString());
-        System.out.println("toString de la película: " +listaDePeliculas.get(0).toString());
+        System.out.println("toString de la película: " + listaDePeliculas.get(0).toString());
     }
 
 }
