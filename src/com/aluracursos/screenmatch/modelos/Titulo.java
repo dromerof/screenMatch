@@ -54,7 +54,7 @@ public class Titulo  implements Comparable<Titulo>{
     public void muestraFichaTecnica() {
         System.out.println("El nombre de la película es: " + nombre);
         System.out.println("La película Fue estrena en el año: " + fechaLanzamineto);
-        System.out.println("La duracion en minutos de la película es: " + getDuracionMinutos());
+        System.out.println("La duración en minutos de la película es: " + getDuracionMinutos());
     }
 
     public void evaluacion(double nota) {
