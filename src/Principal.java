@@ -11,8 +11,7 @@ public class Principal {
 
         System.out.println("\n****************************************************************\n");
 
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto");
         miPelicula.setFechaLanzamineto(2021);
         miPelicula.setDuracionMinutos(120);
         miPelicula.setIncluidoPlan(true);
@@ -26,8 +25,7 @@ public class Principal {
 
         System.out.println("\n****************************************************************\n");
 
-        Pelicula miPelicula2 = new Pelicula();
-        miPelicula2.setNombre("Matrix");
+        Pelicula miPelicula2 = new Pelicula("Matrix");
         miPelicula2.setFechaLanzamineto(1998);
         miPelicula2.setDuracionMinutos(180);
 
@@ -66,8 +64,7 @@ public class Principal {
 
         System.out.println("\n****************************************************************\n");
 
-        var peliculaDeBruno = new Pelicula();
-        peliculaDeBruno.setNombre("El señor de los anillos");
+        var peliculaDeBruno = new Pelicula("El señor de los anillos");
         peliculaDeBruno.setDuracionMinutos(180);
         peliculaDeBruno.setFechaLanzamineto(2001);
 
