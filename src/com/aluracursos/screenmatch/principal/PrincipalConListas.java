@@ -16,6 +16,9 @@ public class PrincipalConListas {
         peliculaDeBruno.evaluacion(10);
         Serie casaDragon = new Serie("Casa del Dragon", 2023);
 
+
+        Pelicula pl = peliculaDeBruno;
+
         ArrayList<Titulo> lista = new ArrayList<>();
 
         lista.add(miPelicula);
@@ -24,9 +27,10 @@ public class PrincipalConListas {
         lista.add(casaDragon);
 
         for (Titulo item : lista) {
-            System.out.println(item);
-            Pelicula pelicula = (Pelicula) item;
+            System.out.println(item.getNombre());
+            if (item instanceof Pelicula pelicula && pelicula.getClasificacion() > 2){
             System.out.println(pelicula.getClasificacion());
+            }
         }
     }
 }
