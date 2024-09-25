@@ -14,7 +14,7 @@ public class PrincipalConBusqueda {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Exriba el nombre de la pelicula: ");
+        System.out.println("Escriba el nombre de la pelicula: ");
         var busqueda = teclado.nextLine();
 
         String direccion = "https://www.omdbapi.com/?t=" + busqueda + "&apikey=1a5f7624";
