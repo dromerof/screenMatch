@@ -1,25 +1,29 @@
 package com.aluracursos.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo  implements Comparable<Titulo>{
 
+    @SerializedName("Title")
     private String nombre;
-    private int fechaLanzamineto;
+    @SerializedName("Year")
+    private int fechaLanzamiento;
     private int duracionMinutos;
     private boolean incluidoPlan;
     private double sumaEvaluaciones;
     private int totalEvaluciones;
 
-    public Titulo(String nombre, int fechaLanzamineto) {
+    public Titulo(String nombre, int fechaLanzamiento) {
         this.nombre = nombre;
-        this.fechaLanzamineto = fechaLanzamineto;
+        this.fechaLanzamiento = fechaLanzamiento;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public int getFechaLanzamineto() {
-        return fechaLanzamineto;
+    public int getFechaLanzamiento() {
+        return fechaLanzamiento;
     }
 
     public int getDuracionMinutos() {
@@ -34,8 +38,8 @@ public class Titulo  implements Comparable<Titulo>{
         this.nombre = nombre;
     }
 
-    public void setFechaLanzamineto(int fechaLanzamineto) {
-        this.fechaLanzamineto = fechaLanzamineto;
+    public void setFechaLanzamineto(int fechaLanzamiento) {
+        this.fechaLanzamiento = fechaLanzamiento;
     }
 
     public void setDuracionMinutos(int duracionMinutos) {
@@ -53,7 +57,7 @@ public class Titulo  implements Comparable<Titulo>{
 
     public void muestraFichaTecnica() {
         System.out.println("El nombre de la película es: " + nombre);
-        System.out.println("La película Fue estrena en el año: " + fechaLanzamineto);
+        System.out.println("La película Fue estrena en el año: " + fechaLanzamiento);
         System.out.println("La duración en minutos de la película es: " + getDuracionMinutos());
     }
 
@@ -69,6 +73,13 @@ public class Titulo  implements Comparable<Titulo>{
     @Override
     public int compareTo(Titulo otroTitulo) {
         return this.getNombre().compareTo(otroTitulo.getNombre());
+    }
+
+    @Override
+    public String toString() {
+        return
+                "nombre de la película: '" + nombre + '\'' +
+                ", fecha de lanzamiento: " + fechaLanzamiento;
     }
 }
 

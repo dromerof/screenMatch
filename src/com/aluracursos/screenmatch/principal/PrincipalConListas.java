@@ -47,7 +47,7 @@ public class PrincipalConListas {
         Collections.sort(lista);
         System.out.println("Lista ordenada de títulos: " + lista);
 
-        lista.sort(Comparator.comparing(Titulo::getFechaLanzamineto));
+        lista.sort(Comparator.comparing(Titulo::getFechaLanzamiento));
         System.out.println("Lista ordenada por fecha de Series: " + lista);
     }
 }
