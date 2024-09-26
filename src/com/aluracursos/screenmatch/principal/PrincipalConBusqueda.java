@@ -8,19 +8,21 @@ import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class PrincipalConBusqueda {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Escriba el nombre de la pelicula: ");
+        System.out.println("Escriba el nombre de la película: ");
         var busqueda = teclado.nextLine();
-
-        String direccion = "https://www.omdbapi.com/?t=" + busqueda + "&apikey=1a5f7624";
+        String busquedaCodificada = URLEncoder.encode(busqueda, StandardCharsets.UTF_8);
+        String direccion = "https://www.omdbapi.com/?t=" + busquedaCodificada + "&apikey=1a5f7624";
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()

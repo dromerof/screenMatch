@@ -22,7 +22,7 @@ public class Titulo  implements Comparable<Titulo>{
 
         this.nombre = miTituloOmdb.title();
         this.fechaLanzamiento = Integer.valueOf(miTituloOmdb.year());
-        this.duracionMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,2));
+        this.duracionMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0,3).replace(" ", ""));
 
 
     }
