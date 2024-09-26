@@ -25,6 +25,11 @@ public class PrincipalConBusqueda {
         Scanner teclado = new Scanner(System.in);
         List<Titulo> titulos = new ArrayList<>();
 
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .setPrettyPrinting()
+                .create();
+
 
         while (true) {
             System.out.println("Escriba el nombre de la película: ");
@@ -49,9 +54,7 @@ public class PrincipalConBusqueda {
                 String json = response.body();
                 System.out.println(json);
 
-                Gson gson = new GsonBuilder()
-                        .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                        .create();
+
                 TituloOmdb miTituloOmdb = gson.fromJson(json, TituloOmdb.class);
                 System.out.println(miTituloOmdb);
 
@@ -69,6 +72,9 @@ public class PrincipalConBusqueda {
 
         }
         System.out.println(titulos);
+        FileWriter escritura = new FileWriter("titulos.json");
+        escritura.write(gson.toJson(titulos));
+        escritura.close();
         System.out.println("Finalizo la ejecución de programa");
     }
 }
