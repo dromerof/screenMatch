@@ -43,7 +43,9 @@ public class PrincipalConBusqueda {
         }catch (NumberFormatException e){
             System.out.println("Ocurrió un error: ");
             System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Finalizo la ejecución de programa");
         }
-        System.out.println("Finalizo la ejecución de programa");
+
     }
 }
