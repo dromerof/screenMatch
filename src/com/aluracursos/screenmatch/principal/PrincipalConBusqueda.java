@@ -32,7 +32,7 @@ public class PrincipalConBusqueda {
 
 
         while (true) {
-            System.out.println("Escriba el nombre de la película: ");
+            System.out.println("Escriba el nombre de la película que desea: ");
             var busqueda = teclado.nextLine();
 
             if (busqueda.equalsIgnoreCase("salir")) {
