@@ -63,7 +63,7 @@ public class PrincipalConBusqueda {
 
                 titulos.add(miTitulo);
             } catch (NumberFormatException e) {
-                System.out.println("Ocurrió un error: " + e.getMessage());
+                System.out.println("Ocurrió un error el cual es: " + e.getMessage());
             } catch (IllegalArgumentException e) {
                 System.out.println("Error en la URI, verifiquen la dirección");
             } catch (ErrorEnConversionDeDuracionException e) {
