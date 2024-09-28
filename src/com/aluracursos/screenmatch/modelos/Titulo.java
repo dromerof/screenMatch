@@ -90,7 +90,7 @@ public class Titulo  implements Comparable<Titulo>{
     public String toString() {
         return
                 "(El nombre de la película es: " + nombre + "\n" +
-                "Fecha de lanzamiento: " + fechaLanzamiento + "\n" +
+                "La fecha de lanzamiento es: " + fechaLanzamiento + "\n" +
                 "Duración: " + duracionMinutos + " minutos)";
     }
 }
